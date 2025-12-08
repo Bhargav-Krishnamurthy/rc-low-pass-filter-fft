@@ -95,8 +95,6 @@ This represents a useful low-frequency signal corrupted by high-frequency noise.
 ## Author
 
 **Bhargav Krishnamurthy**
-First-Year Electrical Engineering Student
-IIT Hyderabad
 
 ---
 
