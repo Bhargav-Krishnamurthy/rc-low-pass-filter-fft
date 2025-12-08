@@ -6,7 +6,7 @@ This project demonstrates the **design, mathematical analysis, and simulation of
 
 ---
 
-## 📌 Project Objectives
+## Project Objectives
 
 * To design an **RC low-pass filter** for a cutoff frequency of **10 Hz**
 * To apply a **mixed noisy signal** as the input
@@ -16,7 +16,7 @@ This project demonstrates the **design, mathematical analysis, and simulation of
 
 ---
 
-## 🧠 Theory Overview
+## Theory Overview
 
 An RC low-pass filter consists of:
 
@@ -24,21 +24,21 @@ An RC low-pass filter consists of:
 * A **capacitor (C)** connected to ground
 * Output taken across the **capacitor**
 
-### ✅ Transfer Function
+### Transfer Function
 
-[
+\[
 H(j\omega) = \frac{1}{1 + j\omega RC}
-]
+\]
 
-### ✅ Cutoff Frequency
+### Cutoff Frequency
 
-[
+\[
 f_c = \frac{1}{2\pi RC}
-]
+\]
 
 ---
 
-## ⚙️ Design Specifications
+## Design Specifications
 
 | Parameter                | Value      |
 | ------------------------ | ---------- |
@@ -50,19 +50,19 @@ f_c = \frac{1}{2\pi RC}
 
 ---
 
-## 🔌 Input Signal Used
+## Input Signal Used
 
 A mixed-frequency test signal is applied:
 
-[
+\[
 V(t) = \sin(2\pi \cdot 5t) + 0.3\sin(2\pi \cdot 50t)
-]
+\]
 
 This represents a useful low-frequency signal corrupted by high-frequency noise.
 
 ---
 
-## 🧪 Software Tools Used
+## Software Tools Used
 
 * **LTspice / NGSpice** – circuit simulation + FFT
 * **Python (NumPy, SciPy, Matplotlib)** – FFT verification
@@ -71,34 +71,8 @@ This represents a useful low-frequency signal corrupted by high-frequency noise.
 
 ---
 
-## ▶️ How to Run the LTspice Simulation
 
-1. Open **LTspice**
-2. Build the RC circuit:
-
-   * Series **R = 10 kΩ**
-   * Shunt **C = 1.5 μF**
-3. Use a **Behavioral Voltage Source (BV)** and enter:
-
-   ```
-   V = sin(2*pi*5*time) + 0.3*sin(2*pi*50*time)
-   ```
-4. Add simulation command:
-
-   ```
-   .tran 2
-   .save V(in) V(out)
-   ```
-5. Run the simulation
-6. Plot:
-
-   * `V(in)` → Input
-   * `V(out)` → Filtered Output
-7. Use **View → FFT** to verify frequency suppression
-
----
-
-## 📊 Expected Results
+## Expected Results
 
 * In **time domain**:
 
@@ -106,32 +80,22 @@ This represents a useful low-frequency signal corrupted by high-frequency noise.
   * Output → smooth, low-frequency waveform
 * In **frequency domain (FFT)**:
 
-  * 5 Hz component → preserved ✅
-  * 50 Hz component → strongly attenuated ✅
+  * 5 Hz component → preserved 
+  * 50 Hz component → diminished
 
 ---
 
-## 📄 Documentation
+## Documentation
 
-* ✅ Full mathematical derivation
-* ✅ CircuitikZ diagram
-* ✅ LTspice simulation
-* ✅ FFT verification
-* ✅ LaTeX project report included
-
----
-
-## 🚀 Future Scope
-
-* RC **high-pass and band-pass filters**
-* Digital **Butterworth and FIR filters**
-* Hardware implementation on a **breadboard**
-* Sensor signal conditioning
-* Control systems applications
+*  Full mathematical derivation
+*  CircuitikZ diagram
+*  LTspice simulation
+*  FFT verification
+*  LaTeX project report included
 
 ---
 
-## 👤 Author
+## Author
 
 **Bhargav Krishnamurthy**
 First-Year Electrical Engineering Student
@@ -139,17 +103,7 @@ IIT Hyderabad
 
 ---
 
-## ✅ License
+## License
 
 This project is intended for **academic and learning purposes**.
 All simulations and derivations are student-generated.
-
----
-
-If you want, I can also:
-
-✅ Add a **Python usage section**
-✅ Convert this into a **GitHub-style professional README with badges**
-✅ Add a **project folder structure**
-
-Just tell me what you want to add next 😄
