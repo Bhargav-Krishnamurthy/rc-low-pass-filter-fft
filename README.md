@@ -26,15 +26,13 @@ An RC low-pass filter consists of:
 
 ### Transfer Function
 
-\[
-H(j\omega) = \frac{1}{1 + j\omega RC}
-\]
+H(jω) = 1 / (1 + jωRC)
+
 
 ### Cutoff Frequency
 
-\[
-f_c = \frac{1}{2\pi RC}
-\]
+f_c = 1 / (2πRC)
+
 
 ---
 
@@ -54,9 +52,8 @@ f_c = \frac{1}{2\pi RC}
 
 A mixed-frequency test signal is applied:
 
-\[
-V(t) = \sin(2\pi \cdot 5t) + 0.3\sin(2\pi \cdot 50t)
-\]
+V(t) = sin(2π·5t) + 0.3·sin(2π·50t)
+
 
 This represents a useful low-frequency signal corrupted by high-frequency noise.
 
